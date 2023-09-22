@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Lava : MonoBehaviour
 {
@@ -14,9 +15,11 @@ public class Lava : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Destroy(other.gameObject);
-            camera.player = Instantiate(player, startlocation, Quaternion.identity);
-            
+            //Destroy(other.gameObject);
+            //camera.player = Instantiate(player, startlocation, Quaternion.identity);
+            //playerIsOnPlatform = true;
+
+            SceneManager.LoadScene(0);
 
         }
         //if (rb.velocity.magnitude != 0
